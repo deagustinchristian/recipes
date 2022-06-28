@@ -9,14 +9,6 @@ body {
     color: #4A4A4F;
 }
 
-.red-o {
-    color: #E84610;
-}
-
-.thin {
-    font-weight: 300;
-}
-
 .light-bg {
     background-color: #fff;
 }
@@ -99,6 +91,10 @@ body {
 .post-title {
     margin-top: 20%;
     margin-left: 5%;
+}
+
+.boxed {
+    border: 1px solid black ;
 }
 
 .post-subtitle {
