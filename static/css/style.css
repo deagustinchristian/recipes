@@ -14,7 +14,7 @@ body {
 }
 
 .dark-bg {
-    background-color: #913a08;
+    background-color: #913a08 !important;
 }
 
 .main-bg {
