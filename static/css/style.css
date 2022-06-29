@@ -68,13 +68,13 @@ body {
     content: "";
     position: absolute;
     top: 0;
-    right: 90%;
+    right: 97%;
     height: 100%;
     width: 150%;
     background: #913a08;
     -webkit-transform: skew(15deg);
     -moz-transform: skew(15deg);
-    transform: skew(15deg);
+    transform: skew(346deg) !important;
     z-index: 100;
 }
 
@@ -94,6 +94,8 @@ body {
 }
 
 .boxed {
+    padding-left: 5px;
+    margin-top: 10px;
     border: 1px solid black ;
 }
 
