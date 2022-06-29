@@ -52,6 +52,8 @@ INSTALLED_APPS = [
     'recipes',
 ]
 
+ACCOUNT_EMAIL_VERIFICATION = 'none'
+
 SITE_ID = 1
 
 LOGIN_REDIRECT_URL = '/'
