@@ -79,6 +79,12 @@
         <div class="col-md-4 card mb-4  mt-3 ">
             <div class="card-body">
                 <!-- Comment only appears if user is authenticated -->
+                {% if commented %}
+                <div class="allert alert-success" role="alert">
+                    Your comment is awaiting approval
+                </div>
+                {% else %}
+
                 {% if user.is_authenticated %}
 
                 <h3>Leave a comment:</h3>
@@ -89,6 +95,7 @@
                     <button type="submit" class="btn btn-signup btn-lg">Submit</button>
                 </form>
 
+                {% endif %}
                 {% endif %}
 
             </div>
