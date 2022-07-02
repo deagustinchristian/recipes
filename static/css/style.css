@@ -12,7 +12,18 @@ body {
 .light-bg {
     background-color: #fff;
 }
+.add-button {
+    background-color: #913a08 !important;
+    color: #ffffff !important;
+    border-radius: 5px !important;
+}    
 
+.add-button:hover,
+.add-button:active {
+    background-color: #E84610 !important;
+    color: #ffffff !important;
+    border-radius: 5px !important;
+}
 .dark-bg {
     background-color: #913a08 !important;
 }
@@ -133,4 +144,65 @@ body {
     color: #E84610;
     background: transparent;
     border: none;
+}
+
+
+.imcontainer {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .imcontainer img {
+    width: 100%;
+  }
+  
+  .imcontainer .btn {
+    position: absolute;
+    top: 6%;
+    left: 95%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    color: red;
+    font-size: 22px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .imcontainer .btn:hover {
+    background-color: black;
+  }
+
+  .imcontainer .editbtn {
+    position: absolute;
+    top: 6%;
+    left: 88%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    color: blue;
+    font-size: 22px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .imcontainer .editbtn:hover {
+    background-color: black;
+  }
+
+.add-formlabel {
+    background-color: #913a08 !important;
+    color: #ffffff !important;
+    border-radius: 5px !important;
+    padding: 10px;
+    margin: 5px 0px;
+    margin-bottom: 30px;
+} 
+
+.imgclass{
+    height: 350px;
+    width: 100%
 }
