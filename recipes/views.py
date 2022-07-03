@@ -82,6 +82,7 @@ class PostLike(View):
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
+
 class CreatePost(LoginRequiredMixin, CreateView):
 
     fields = ["title", "slug", "content", "featured_image", "excerpt", "status", "prep_time", "cook_time", "servings"]
@@ -93,6 +94,7 @@ class CreatePost(LoginRequiredMixin, CreateView):
         self.object.author = self.request.user
         self.object.save()
         return super().form_valid(form)
+
 
 class DeletePost(LoginRequiredMixin, DeleteView):
 
