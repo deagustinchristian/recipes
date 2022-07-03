@@ -24,6 +24,7 @@ body {
     color: #ffffff !important;
     border-radius: 5px !important;
 }
+
 .dark-bg {
     background-color: #913a08 !important;
 }
@@ -146,7 +147,6 @@ body {
     border: none;
 }
 
-
 .imcontainer {
     position: relative;
     width: 100%;
@@ -202,7 +202,7 @@ body {
     margin-bottom: 30px;
 } 
 
-.imgclass{
+.imgclass {
     height: 350px;
-    width: 100%
+    width: auto;
 }
