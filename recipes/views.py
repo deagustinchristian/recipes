@@ -74,7 +74,7 @@ class PostLike(View):
 
     def post(self, request, slug, *args, **kwargs):
         post = get_object_or_404(Post, slug=slug)
-
+        
         if post.likes.filter(id=request.user.id).exists():
             post.likes.remove(request.user)
         else:
@@ -82,11 +82,9 @@ class PostLike(View):
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
-
 class CreatePost(LoginRequiredMixin, CreateView):
 
-    fields = ["title", "slug", "content", "featured_image", "excerpt",
-              "status", "prep_time", "cook_time", "servings"]
+    fields = ["title", "slug", "content", "featured_image", "excerpt", "status", "prep_time", "cook_time", "servings"]
     model = Post
     template_name = "recipes/postcreate.html"
 
@@ -95,7 +93,6 @@ class CreatePost(LoginRequiredMixin, CreateView):
         self.object.author = self.request.user
         self.object.save()
         return super().form_valid(form)
-
 
 class DeletePost(LoginRequiredMixin, DeleteView):
 
@@ -107,11 +104,9 @@ class DeletePost(LoginRequiredMixin, DeleteView):
         messages.success(self.request, "Post Deleted")
         return super().delete(*args, **kwargs)
 
-
 class Updatepost(LoginRequiredMixin, UpdateView):
 
     model = Post
     success_url = reverse_lazy("home")
-    fields = ["title", "content", "featured_image", "excerpt", "status",
-              "prep_time", "cook_time", "servings"]
+    fields = ["title", "content", "featured_image", "excerpt", "status", "prep_time", "cook_time", "servings"]
     template_name = "recipes/postupdate.html"
