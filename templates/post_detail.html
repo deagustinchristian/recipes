@@ -6,13 +6,19 @@
     <div class="container">
         <div class="row g-0">
             <div class="col-md-6 masthead-text">
-                <!-- Recipe title goes in these h1 tags -->
+
+                <!-- Recipe title -->
+
                 <h1 class="post-title">{{ post.title }}</h1>
-                <!-- Post author/Chef goes before the | the post's created date goes after -->
+
+                <!-- Recipe author/Chef goes before the | the post's created date goes after -->
+
                 <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
+
                 <!-- The featured image URL goes in the src attribute -->
+
                 {% if "placeholder" in post.featured_image.url %}
                 <img src="https://res.cloudinary.com/cmanzanada84/image/upload/v1656434232/BE64B2AB-1472-4C6C-B101-9EB73B6D8D98_1_201_a_mgbj8e.jpg"
                     width="100%">
@@ -28,8 +34,9 @@
     <div class="row">
         <div class="col card mb-4  mt-3 left  top">
             <div class="card-body">
+
                 <!-- The recipe content goes inside the card-text. -->
-                <!-- Use the | safe filter inside the template tags -->
+
                 <p class="card-text ">
                     {{ post.content | safe }}
                 </p>
@@ -81,27 +88,39 @@
         <div class="col-md-8 card mb-4  mt-3 ">
             <h3>Comments:</h3>
             <div class="card-body">
+
                 <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
                 {% for comment in comments %}
+
                 <div class="comments" style="padding: 10px;">
                     <p class="font-weight-bold">
+
                         <!-- The commenter's name goes here. -->
+
                         {{ comment.name }}
                         <span class=" text-muted font-weight-normal">
+
                             <!-- The comment's created date goes here -->
+
                             {{ comment.created_on }}
                         </span> wrote:
                     </p>
+
                     <!-- The body of the comment goes before the | -->
+
                     {{ comment.body | linebreaks }}
                 </div>
+
                 <!-- Our for loop ends here -->
+
                 {% endfor %}
             </div>
         </div>
         <div class="col-md-4 card mb-4  mt-3 ">
             <div class="card-body">
-                <!-- Comment only appears if user is authenticated -->
+
+                <!-- Comment only appears if user is authenticated/has registered an account -->
+
                 {% if commented %}
                 <div class="alert alert-success" role="alert">
                     Your comment is awaiting approval

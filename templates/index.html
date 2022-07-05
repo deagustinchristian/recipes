@@ -41,7 +41,7 @@
                             </div>
                             <a href="{% url 'post_detail' post.slug %}" class="post-link">
                                 <h2 class="card-title">{{ post.title }}</h2>
-                                <p class="card-text">{{ post.excerpt }}</p>
+                                <p class="card-description">{{ post.excerpt }}</p>
                             </a>
                             <p class="boxed">Prep Time {{ post.prep_time }}</p>
                             <p class="boxed">Cook Time {{ post.cook_time }}</p>

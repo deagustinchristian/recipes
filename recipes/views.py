@@ -85,7 +85,8 @@ class PostLike(View):
 
 class CreatePost(LoginRequiredMixin, CreateView):
 
-    fields = ["title", "slug", "content", "featured_image", "excerpt", "status", "prep_time", "cook_time", "servings"]
+    fields = ["title", "slug", "content", "featured_image", "excerpt",
+              "status", "prep_time", "cook_time", "servings"]
     model = Post
     template_name = "recipes/postcreate.html"
 
@@ -106,9 +107,11 @@ class DeletePost(LoginRequiredMixin, DeleteView):
         messages.success(self.request, "Post Deleted")
         return super().delete(*args, **kwargs)
 
-class Updatepost(LoginRequiredMixin, UpdateView):
+
+class UpdatePost(LoginRequiredMixin, UpdateView):
 
     model = Post
     success_url = reverse_lazy("home")
-    fields = ["title", "content", "featured_image", "excerpt", "status", "prep_time", "cook_time", "servings"]
+    fields = ["title", "content", "featured_image", "excerpt", "status",
+              "prep_time", "cook_time", "servings"]
     template_name = "recipes/postupdate.html"

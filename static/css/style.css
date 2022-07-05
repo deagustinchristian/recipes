@@ -38,6 +38,10 @@ body {
     background-color: transparent;
 }
 
+.card-description {
+    -webkit-line-clamp: 1 !important;
+}
+
 .image-container {
     position: relative;
 }
