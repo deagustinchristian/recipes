@@ -1,12 +1,12 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.views.generic import CreateView, DeleteView, UpdateView
+from django.contrib import messages
 from .models import Post
 from .forms import CommentForm
-from django.views.generic import CreateView, DeleteView, UpdateView
 from django.urls import reverse_lazy
-from django.contrib.auth.mixins import LoginRequiredMixin
-from django.contrib import messages
 
 
 class PostList(generic.ListView):
