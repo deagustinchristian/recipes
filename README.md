@@ -33,20 +33,21 @@ Foodstar is an online recipe app made for people with a crawing to cook and eat.
 
 ![Register an Account](https://res.cloudinary.com/cmanzanada84/image/upload/v1657113324/Readme/register_account_cqvs1v.jpg)
 
-- If a user exists with same name or email, user is notified, same goes for if password is to common or to short
+- If a user exists with same name or email, user is notified, same goes for if the password is too common or too short
 
 ![Account registration](https://res.cloudinary.com/cmanzanada84/image/upload/v1657113460/Readme/registration_messages_fbergk.jpg)
 
-- A pop up message tells the user sign up was successfull
+- A pop-up message tells the user sign up was successful
 
 ![Successfull signup](https://res.cloudinary.com/cmanzanada84/image/upload/v1657114258/Readme/popup_signin_djon7b.jpg)
 
-![Computer wins](https://raw.githubusercontent.com/deagustinchristian/Rock-Paper-Scissors/main/assets/images/readme%20images/Computer%20wins%20the%20match.jpeg)
+![Registered user can create recipes](https://res.cloudinary.com/cmanzanada84/image/upload/v1657114868/Readme/New_recipe_form_px5pfu.jpg)
 
+![User can edit/delete their own recipes](https://res.cloudinary.com/cmanzanada84/image/upload/v1657115182/Readme/editdelete_bf28by.jpg)
 
 - __The Footer__ 
 
-    - Contains only the RULES button which when pressed upon shows the basic rules of the game and after a fixed amount of seconds disappears until pressed upon again.
+    - Contains Social media icons.
 
 ![Footer](https://raw.githubusercontent.com/deagustinchristian/Rock-Paper-Scissors/main/assets/images/readme%20images/Rules%20button.jpeg)
 
