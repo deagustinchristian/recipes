@@ -4,62 +4,55 @@
 
 <div class="container-fluid">
     <div class="row">
-
-        <!-- Recipe Entries Column -->
-        <div class="col-12 mt-3 left">
-            <div class="row">
-                {% for post in post_list %}
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <div class="image-container">
-                                {% if "placeholder" in post.featured_image.url %}
-                                <div class="imcontainer">
-                                <img class="card-img-top imgclass"
-                                src="https://res.cloudinary.com/cmanzanada84/image/upload/v1656780700/settable_k7uhce.jpg">
-                                {% if user.is_authenticated %}
-                                {% if user.id == post.author.id %} 
-                                <a class="btn" href="{% url 'deletepost' pk=post.id %}"><span class="bi bi-trash"></span></a>
-                                <a class="editbtn" href="{% url 'updatepost' pk=post.id %}"><span class="bi bi-pen"></span></a>
-                                {% endif %} 
-                                {% endif %}
-                                </div>
-                                {% else %}
-                                <div class="imcontainer">
-                                <img class="card-img-top imgclass" src=" {{ post.featured_image.url }}">
-                                {% if user.is_authenticated %}
-                                {% if user.id == post.author.id %}    
-                                <a class="btn" href="{% url 'deletepost' pk=post.id %}"><span class="bi bi-trash"></span></a>
-                                <a class="editbtn" href="{% url 'updatepost' pk=post.id %}"><span class="bi bi-pen"></span></a>
-                                {% endif %} 
-                                {% endif %}
-                                </div>
-                                {% endif %}
-                                <div class="image-flash">
-                                    <p class="chef">Chef: {{ post.author }}</p>
-                                </div>
-                            </div>
-                            <a href="{% url 'post_detail' post.slug %}" class="post-link">
-                                <h2 class="card-title">{{ post.title }}</h2>
-                                <p class="card-description">{{ post.excerpt }}</p>
-                            </a>
-                            <p class="boxed">Prep Time {{ post.prep_time }}</p>
-                            <p class="boxed">Cook Time {{ post.cook_time }}</p>
-                            <hr />
-                            <p class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-heart"></i>
-                                {{ post.number_of_likes }}</p>
+        {% for post in post_list %}
+        <div class="col-lg-4 col-sm-6 mt-3 left">
+            <div class="card">
+                <div class="card-body">
+                    <div class="image-container">
+                        {% if "placeholder" in post.featured_image.url %}
+                        <div class="imcontainer">
+                            <img class="card-img-top imgclass"
+                            src="https://res.cloudinary.com/cmanzanada84/image/upload/v1656780700/settable_k7uhce.jpg">
+                            {% if user.is_authenticated %}
+                            {% if user.id == post.author.id %} 
+                            <a class="btn" href="{% url 'deletepost' pk=post.id %}"><span class="bi bi-trash"></span></a>
+                            <a class="editbtn" href="{% url 'updatepost' pk=post.id %}"><span class="bi bi-pen"></span></a>
+                            {% endif %} 
+                            {% endif %}
+                        </div>
+                        {% else %}
+                        <div class="imcontainer">
+                            <img class="card-img-top imgclass" src=" {{ post.featured_image.url }}">
+                            {% if user.is_authenticated %}
+                            {% if user.id == post.author.id %}    
+                            <a class="btn" href="{% url 'deletepost' pk=post.id %}"><span class="bi bi-trash"></span></a>
+                            <a class="editbtn" href="{% url 'updatepost' pk=post.id %}"><span class="bi bi-pen"></span></a>
+                            {% endif %} 
+                            {% endif %}
+                        </div>
+                        {% endif %}
+                        <div class="image-flash">
+                            <p class="chef">Chef: {{ post.author }}</p>
                         </div>
                     </div>
+                    <a href="{% url 'post_detail' post.slug %}" class="post-link">
+                        <h2 class="card-title">{{ post.title }}</h2>
+                        <p class="card-text">{{ post.excerpt }}</p>
+                    </a>
+                    <p class="boxed">Prep Time {{ post.prep_time }}</p>
+                    <p class="boxed">Cook Time {{ post.cook_time }}</p>
+                    <hr />
+                    <p class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-heart"></i>
+                        {{ post.number_of_likes }}</p>
+                    </div>
                 </div>
-                {% if forloop.counter|divisibleby:3 %}
             </div>
-            <div class="row">
-                {% endif %}
-                {% endfor %}
-
-            </div>
+            {% endfor %}  
         </div>
     </div>
+
+    <!-- Display Next and Previous buttons -->
+
     {% if is_paginated %}
     <nav aria-label="Page navigation">
         <ul class="pagination justify-content-center">
@@ -68,10 +61,10 @@
             {% endif %}
             {% if page_obj.has_next %}
             <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
-
+            
             {% endif %}
         </ul>
     </nav>
     {% endif %}
-</div>
-{%endblock%}
+    
+    {%endblock%}
