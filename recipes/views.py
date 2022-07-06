@@ -4,9 +4,9 @@ from django.http import HttpResponseRedirect
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import CreateView, DeleteView, UpdateView
 from django.contrib import messages
+from django.urls import reverse_lazy
 from .models import Post
 from .forms import CommentForm
-from django.urls import reverse_lazy
 
 
 class PostList(generic.ListView):
@@ -85,7 +85,7 @@ class PostLike(View):
 
 class CreatePost(LoginRequiredMixin, CreateView):
 
-    fields = ["title", "slug", "content", "featured_image", "excerpt",
+    fields = ["title", "content", "featured_image", "excerpt",
               "status", "prep_time", "cook_time", "servings"]
     model = Post
     template_name = "recipes/postcreate.html"
