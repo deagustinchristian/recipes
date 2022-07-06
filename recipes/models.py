@@ -2,12 +2,12 @@ from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 from django.urls import reverse
-from django_summernote.fields import SummernoteTextField
 from django.utils.text import slugify
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
 # Recipe Model
+
 
 class Post(models.Model):
     title = models.CharField(max_length=250, unique=True)
@@ -15,7 +15,7 @@ class Post(models.Model):
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="recipe_posts"
     )
-    content = SummernoteTextField()
+    content = models.TextField()
     featured_image = CloudinaryField('image', default='placeholder')
     excerpt = models.TextField(blank=True)
     created_on = models.DateTimeField(auto_now_add=True)
@@ -49,6 +49,7 @@ class Post(models.Model):
         return reverse('home')
 
 # Comment Model
+
 
 class Comment(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE,

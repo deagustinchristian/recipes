@@ -9,12 +9,16 @@ from .models import Post
 from .forms import CommentForm
 
 
+# Creates recipe list
+
 class PostList(generic.ListView):
     model = Post
     queryset = Post.objects.filter(status=1).order_by("-created_on")
     template_name = "index.html"
     paginate_by = 6
 
+
+# Shows the recipe details and comments
 
 class PostDetail(View):
 
@@ -70,6 +74,8 @@ class PostDetail(View):
         )
 
 
+# Likes
+
 class PostLike(View):
 
     def post(self, request, slug, *args, **kwargs):
@@ -82,6 +88,8 @@ class PostLike(View):
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
+
+# Lets signed in users create recipe
 
 class CreatePost(LoginRequiredMixin, CreateView):
 
@@ -97,6 +105,8 @@ class CreatePost(LoginRequiredMixin, CreateView):
         return super().form_valid(form)
 
 
+# Signed in user can delete their own recipes
+
 class DeletePost(LoginRequiredMixin, DeleteView):
 
     model = Post
@@ -107,6 +117,8 @@ class DeletePost(LoginRequiredMixin, DeleteView):
         messages.success(self.request, "Post Deleted")
         return super().delete(*args, **kwargs)
 
+
+# Signed in user can update their own recipe
 
 class UpdatePost(LoginRequiredMixin, UpdateView):
 

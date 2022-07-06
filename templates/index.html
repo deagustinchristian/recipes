@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load crispy_forms_tags %}
 
 {% block content %}
 
@@ -12,7 +13,7 @@
                         {% if "placeholder" in post.featured_image.url %}
                         <div class="imcontainer">
                             <img class="card-img-top imgclass"
-                            src="https://res.cloudinary.com/cmanzanada84/image/upload/v1656780700/settable_k7uhce.jpg">
+                            src="https://res.cloudinary.com/cmanzanada84/image/upload/v1656780700/settable_k7uhce.jpg" alt="dinner table">
                             {% if user.is_authenticated %}
                             {% if user.id == post.author.id %} 
                             <a class="btn" href="{% url 'deletepost' pk=post.id %}"><span class="bi bi-trash"></span></a>
@@ -51,7 +52,7 @@
         </div>
     </div>
 
-    <!-- Display Next and Prev buttons if amount of recipoes is above 6 -->
+    <!-- Display Next and Prev buttons if amount of recipes is above 6 -->
 
     {% if is_paginated %}
     <nav aria-label="Page navigation">
