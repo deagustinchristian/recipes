@@ -1,108 +1,131 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Foodstar - Recipe App
 
-Welcome deagustinchristian,
+Foodstar is an online recipe app made for people with a crawing to cook and eat. Here we can share our passion for food both by adding our favourite recipes but also by commenting on each post/recipe.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+![Looking good on different devices](https://res.cloudinary.com/cmanzanada84/image/upload/v1657108242/Readme/HeaderFoodstar_xewzmc.jpg)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+## Features 
 
-## Gitpod Reminders
+### Existing Features
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+- __Header__
 
-`python3 -m http.server`
+    - The Header displays the apps name: Foodstar and also Home, Register, login and if user is logged in it displays Add recipe and logout.
 
-A blue button should appear to click: _Make Public_,
+    - The Logo has added neon effects so it looks like it's glowing and flickers a little.
 
-Another blue button should appear to click: _Open Browser_.
+![Header](https://res.cloudinary.com/cmanzanada84/image/upload/v1657108242/Readme/HeaderFoodstar_xewzmc.jpg)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+- __The Foodstar options__
 
-A blue button should appear to click: _Make Public_,
+    - A visitor can easily browse through recipes and should they wish comment or even add recipes there is a Register button that when hovered over shifts color.
 
-Another blue button should appear to click: _Open Browser_.
+    - When a user has created an account, they can create/edit/delete recipes of their own making. They can Like/Unlike recipes and they can comment on recipes.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
 
-To log into the Heroku toolbelt CLI:
+![Foodstar options](https://res.cloudinary.com/cmanzanada84/image/upload/v1657109819/Readme/Like_and_comment_frg5v7.jpg)
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+- __Game Results__
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+    - The score is updated according to who wins a round. Either 1 point to the player or 1 point to the computer
 
-------
+![Computer score](https://raw.githubusercontent.com/deagustinchristian/Rock-Paper-Scissors/main/assets/images/readme%20images/Computer%20wins.jpeg)
 
-## Release History
+![Player score](https://raw.githubusercontent.com/deagustinchristian/Rock-Paper-Scissors/main/assets/images/readme%20images/Player%20wins.jpeg)
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+- The game displays who the winner is when one of them has reached 5 points
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+![Player wins](https://raw.githubusercontent.com/deagustinchristian/Rock-Paper-Scissors/main/assets/images/readme%20images/Player%20wins%20the%20match.jpeg)
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+![Computer wins](https://raw.githubusercontent.com/deagustinchristian/Rock-Paper-Scissors/main/assets/images/readme%20images/Computer%20wins%20the%20match.jpeg)
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+- __The Footer__ 
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+    - Contains only the RULES button which when pressed upon shows the basic rules of the game and after a fixed amount of seconds disappears until pressed upon again.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+![Footer](https://raw.githubusercontent.com/deagustinchristian/Rock-Paper-Scissors/main/assets/images/readme%20images/Rules%20button.jpeg)
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+### Features Left to Implement
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+- A future idea to implement would be Spock and Lizard. The images are already added and a function could be made so that after reaching 5 points the SPOCK button gets added, then when the player reaches 10 points the LIZARD button also gets added and the game continues to 20 points before resetting again.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+## Testing 
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+- I have tested the site on Chrome, Safari, and Firefox, both on my laptop and my iPhone 12 Pro Max. The game works as it should on all of them, the score updates as it should, game shows winner or tie of each round as its supposed to do, and game resets when a player or the computer reaches 5 points.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+- Also, the game looks good and all functions work on Ipad Pro, iPhone 12 pro-Max, iPhone X, and MacBook Pro 15´.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+- Using the Devstools I can confirm this website is responsive, looks good, and functions on all standard screen sizes.
 
-------
 
-## FAQ about the uptime script
+### Validator Testing 
 
-**Why have you added this script?**
+- HTML
+  - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdeagustinchristian.github.io%2FRock-Paper-Scissors%2F)
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+- CSS
+  - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fdeagustinchristian.github.io%2FRock-Paper-Scissors%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=sv)
 
-**How will this affect me?**
+- Javascript
+    - No errors were found when passing through the official [JSHint validator](https://jshint.com/)
+  
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+- Lighthouse
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+![Lighthouse result](https://raw.githubusercontent.com/deagustinchristian/Rock-Paper-Scissors/main/assets/images/readme%20images/Lighthouse%20RPS%20game.jpeg)
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+###  Bugs
+- One bug that kept bothering me was when I pressed a button and the results was shown, it was possible to press on the buttons still and the game would register it. Solved it by using the following code
+    - if (gameArea.classList.contains("results-shown")){ 
+        return;
 
-**So….?**
+- Not a bug but I did forget to properly git push alot in the begining which resulted in nothing was saved. Lesson learned.
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+As far as I know, there are no unfixed bugs. 
 
-**Can I opt out?**
+## Deployment
+ 
+- The site was deployed to GitHub pages. The steps to deploy are as follows: 
+  - Go to Github and choose the correct repository, in this case, it was ROCK-PAPER-SCISSORS
+  - Then go to the SETTINGS tab
+  - Then scroll down to where it says PAGES click on it
+  - Here you go to SOURCE then select the MAIN or MASTER branch and press SAVE
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+The live link can be found here - https://deagustinchristian.github.io/Rock-Paper-Scissors/ 
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
 
-**Anything more?**
+## Credits 
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
 
----
+### Content 
 
-Happy coding!
+- All text on the website was made up by me. I did use Grammarly on this ReadMe file just so the grammar and spelling was as correct as it could be.
+
+- I have used different sources to learn and understand the coding and the concepts of JS, to better understand the concepts of the game and how to make it I studied the following websites and how they did it.
+
+    - The linear gradient effect code I got from this website
+        - (https://www.sliderrevolution.com/resources/css-animated-background)
+
+    - This website was really good to get a sense of how the game is built
+        - (https://www.geeksforgeeks.org/rock-paper-and-scissor-game-using-javascript/)
+    
+    - I used code from this website for the compareInput parts and also for the game-ending when the points reach 5
+        - (https://sebhastian.com/rock-paper-scissors-javascript/)
+
+    - I learned more about the classList and how to use it via this website
+        - (https://www.w3schools.com/jsref/prop_element_classlist.asp)
+
+    - I learned how to hide and show elements via these websites
+        - (https://www.geeksforgeeks.org/hide-or-show-elements-in-html-using-display-property/)
+        - (https://linuxhint.com/show-or-hide-an-element-on-website-using-javascript/)
+        - (https://allyjs.io/tutorials/hiding-elements.html)
+
+
+### Media
+
+- The images used for the ROCK PAPER SCISSORS SPOCK LIZARD buttons I found here (https://icon-library.com/icon/rock-paper-scissors-icon-5.html) and are free to use.
+
+- The short cut image/icon used is the same image as used for the game button SCISSORS and converted to a short icon by using the following website [Favicon](https://favicon.io/)
