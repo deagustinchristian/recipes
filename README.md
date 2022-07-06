@@ -19,24 +19,27 @@ Foodstar is an online recipe app made for people with a crawing to cook and eat.
 
 - __The Foodstar options__
 
-    - A visitor can easily browse through recipes and should they wish comment or even add recipes there is a Register button that when hovered over shifts color.
+    - A visitor can easily browse through recipes and should they wish comment or even add recipes, there is a Register button that when hovered over shifts color.
 
     - When a user has created an account, they can create/edit/delete recipes of their own making. They can Like/Unlike recipes and they can comment on recipes.
 
 
+![Foodstar options](https://res.cloudinary.com/cmanzanada84/image/upload/v1657112669/Readme/Site_pagination_gntycx.jpg)
 ![Foodstar options](https://res.cloudinary.com/cmanzanada84/image/upload/v1657109819/Readme/Like_and_comment_frg5v7.jpg)
 
-- __Game Results__
+- __Foodstar features__
 
-    - The score is updated according to who wins a round. Either 1 point to the player or 1 point to the computer
+    - User can register an account
 
-![Computer score](https://raw.githubusercontent.com/deagustinchristian/Rock-Paper-Scissors/main/assets/images/readme%20images/Computer%20wins.jpeg)
+![Register an Account](https://res.cloudinary.com/cmanzanada84/image/upload/v1657113324/Readme/register_account_cqvs1v.jpg)
 
-![Player score](https://raw.githubusercontent.com/deagustinchristian/Rock-Paper-Scissors/main/assets/images/readme%20images/Player%20wins.jpeg)
+- If a user exists with same name or email, user is notified, same goes for if password is to common or to short
 
-- The game displays who the winner is when one of them has reached 5 points
+![Account registration](https://res.cloudinary.com/cmanzanada84/image/upload/v1657113460/Readme/registration_messages_fbergk.jpg)
 
-![Player wins](https://raw.githubusercontent.com/deagustinchristian/Rock-Paper-Scissors/main/assets/images/readme%20images/Player%20wins%20the%20match.jpeg)
+- A pop up message tells the user sign up was successfull
+
+![Successfull signup](https://res.cloudinary.com/cmanzanada84/image/upload/v1657114258/Readme/popup_signin_djon7b.jpg)
 
 ![Computer wins](https://raw.githubusercontent.com/deagustinchristian/Rock-Paper-Scissors/main/assets/images/readme%20images/Computer%20wins%20the%20match.jpeg)
 
