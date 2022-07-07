@@ -2,6 +2,8 @@
 
 Foodstar is an online recipe app made for people with a crawing to cook and eat. Here we can share our passion for food both by adding our favourite recipes but also by commenting on each post/recipe.
 
+[View the live project here](https://foodstar2022.herokuapp.com/ "Link to deployed site - Foodstar 2022")
+
 ![Looking good on different devices](https://res.cloudinary.com/cmanzanada84/image/upload/v1657108242/Readme/HeaderFoodstar_xewzmc.jpg)
 
 ## Features 
@@ -216,6 +218,53 @@ The live link can be found here - https://deagustinchristian.github.io/Rock-Pape
         - (http://www.learningaboutelectronics.com/Articles/How-to-create-a-website-that-allows-for-user-generated-posts-with-Python-in-Django.php)
 
 
+## Deployment
+
+This project was developed using a [GitPod](https://gitpod.io/ "Link to GitPod") workspace. The code was commited to [Git](https://git-scm.com/ "Link to Git") and pushed to [GitHub](https://github.com/ "Link to GitHub") using the terminal.
+
+### Deploying on Heroku
+To deploy this page to Heroku from its GitHub repository, the following steps were taken:
+
+1. Create the Heroku App:
+    - Select "Create new app" in Heroku.
+    - Choose a name for your app and select the location.
+
+2. Attach the Postgres database:
+    - In the Resources tab, under add-ons, type in Postgres and select the Heroku Postgres option.
+
+3. Prepare the environment and settings.py file:
+    - In the Settings tab, click on Reveal Config Vars and copy the url next to DATABASE_URL.
+    - In your GitPod workspace, create an env.py file in the main directory. 
+    - Add the DATABASE_URL value and your chosen SECRET_KEY value to the env.py file.
+    - If Heroku performs maintenance on your DATABASE, remember to update the DATABASE_URL in the env.py   file
+    - Add the SECRET_KEY value to the Config Vars in Heroku.
+    - Update the settings.py file to import the env file and add the SECRETKEY and DATABASE_URL file paths.
+    - Update the Config Vars with the Cloudinary url, adding into the settings.py file also.
+    - In settings.py add the following sections:
+        - Cloudinary to the INSTALLED_APPS list
+        - STATICFILE_STORAGE
+        - STATICFILES_DIRS
+        - STATIC_ROOT
+        - MEDIA_URL
+        - DEFAULT_FILE_STORAGE
+        - TEMPLATES_DIR
+        - Update DIRS in TEMPLATES with TEMPLATES_DIR
+        - Update ALLOWED_HOSTS with ['app_name.heroku.com', 'localhost']
+
+4. Store Static and Media files in Cloudinary and Deploy to Heroku:
+    - Create two directories in the main directory; static and templates.
+    - Create a file named "Procfile" in the main directory and add the following:
+        - web: gunicorn project-name.wsgi
+    - Log in to Heroku using the terminal heroku login -i.
+    - Then run the following command: **heroku git:remote -a projectname**. This will link the app to the Gitpod terminal.
+    - After linking your app to your workspace, you can then deploy new versions of the app by running the command **git push heroku main** and your app will be deployed to Heroku.
+
 ### Media
 
 - The images used for the recipes are all taken by except for the placeholder image, that one I got from Adobe Stock where I am a paying member and allowed to use 10 images per month.
+
+### Acknowledgements
+
+- Im tired now, but thanks to fellow students in our slack community and thank god for Google and Stackoverflow.
+
+- Goodnight
